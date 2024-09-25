@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/loginMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/loginBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/loginpagebg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/veg_bg" />
+
+    <TextView
+        android:id="@+id/appNameLogin"
+        android:layout_width="402dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/comfortaa_light"
+        android:rotationX="10"
+        android:text="@string/agrichime"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#1B5E20"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <LinearLayout
+        android:id="@+id/loginField"
+        android:layout_width="340dp"
+        android:layout_height="155dp"
+        android:alpha="0.85"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/loginEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:ems="10"
+            android:hint="@string/enter_email_or_username"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textAlignment="textStart"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:alpha="0.95"
+        android:backgroundTint="#118811"
+        android:text="Log In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginField"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
