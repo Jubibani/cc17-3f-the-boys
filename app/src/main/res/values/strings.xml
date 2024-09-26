@@ -4,4 +4,8 @@
     <string name="enter_email_or_username">Enter email or username</string>
     <string name="loginpagebg">loginPageBG</string>
     <string name="enter_password">Enter password</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_an_account">Dont have an account?</string>
+    <string name="sign_up_link">sign up</string>
 </resources>
