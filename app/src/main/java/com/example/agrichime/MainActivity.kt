@@ -1,7 +1,9 @@
 package com.example.agrichime
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,12 +20,23 @@ class LogInActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val usernameTemporary = "agrichimetheboys"
+        val passwordTemporary = "sagulaymaybuhay"
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
         forgotPassword.setOnClickListener {TODO ("connect to forgot password page") }
         val signUpLink = findViewById<TextView>(R.id.signUpLink)
         signUpLink.setOnClickListener { TODO("connect to sign up page") }
         val loginButton = findViewById<Button>(R.id.loginButton)
-        loginButton.setOnClickListener {TODO("connect to profile page if credentials are correct, and set message error if not") }
+        loginButton.setOnClickListener {
+            val enteredUsername = findViewById<EditText>(R.id.loginEmail).text.toString()
+            val enteredPassword = findViewById<EditText>(R.id.loginPassword).text.toString()
+
+            if (enteredUsername == usernameTemporary && enteredPassword == passwordTemporary) {
+
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
 }
 }
