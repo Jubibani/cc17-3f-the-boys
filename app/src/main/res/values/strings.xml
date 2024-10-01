@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">AgriChime</string>
     <string name="agrichime">AgriChime</string>
     <string name="enter_email_or_username">Enter email or username</string>
@@ -8,4 +8,9 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="dont_have_an_account">Dont have an account?</string>
     <string name="sign_up_link">sign up</string>
+    <string name="social_media">Social Media</string>
+    <string name="dashboard">DashBoard</string>
+    <string name="socialmedia">SocialMedia</string>
+    <string name="textview">TextView</string>
+    <string name="home_screen">Home Screen</string>
 </resources>

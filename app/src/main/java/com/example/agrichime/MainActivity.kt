@@ -3,13 +3,18 @@ package com.example.agrichime
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+<<<<<<< HEAD
 import android.widget.EditText
+=======
+import android.widget.RelativeLayout
+>>>>>>> 9915dd0f7a874541d3cdf9f4d7a674161ef36946
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+<<<<<<< HEAD
 class LogInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,16 +45,27 @@ class LogInActivity : AppCompatActivity() {
 
 }
 }
+=======
+>>>>>>> 9915dd0f7a874541d3cdf9f4d7a674161ef36946
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+
+        val socialMediaButton = findViewById<Button>(R.id.button2)
+
+        socialMediaButton.setOnClickListener {
+            val intent = Intent(this, SocialMediaScreen::class.java)
+            startActivity(intent)
         }
     }
 }
