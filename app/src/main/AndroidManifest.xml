@@ -12,13 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgriChime"
         tools:targetApi="31">
-
         <activity
-            android:name=".LogInActivity"
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.SocialMediaScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".screens.LogInActivity"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,10 +40,11 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
