@@ -1,13 +1,12 @@
-package com.example.agrichime
+package com.example.agrichime.screens
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener
-import androidx.core.view.WindowInsetsCompat
+import com.example.agrichime.MainActivity
+import com.example.agrichime.R
 
 class SocialMediaScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
