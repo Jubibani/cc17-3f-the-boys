@@ -50,22 +50,62 @@
     </LinearLayout>
 
     <!-- Fragment Container (Fixed constraints) -->
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
 
     <!-- Bottom Navigation View -->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="409dp"
+        android:layout_height="594dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/my_menu" />
+        app:menu="@menu/my_menu"
+        tools:layout_editor_absoluteX="-10dp" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/dashboard"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/dashboard" />
+
+        <ImageButton
+            android:id="@+id/social_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            app:srcCompat="@drawable/socialmedia" />
+
+    </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
