@@ -61,9 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
@@ -94,7 +92,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="5dp"
             android:background="@null"
-            app:srcCompat="@drawable/dashboard" />
+            app:srcCompat="@drawable/dashboard_green" />
 
         <ImageButton
             android:id="@+id/social_media"

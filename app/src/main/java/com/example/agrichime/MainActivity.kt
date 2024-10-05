@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.View
-import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -38,13 +37,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
         // Load the initial fragment (HomeFragment)
         loadFragment(HomeFragment())
 
-        // Initialize the BottomNavigationView
+        // Initialize
         bottomNav = findViewById(R.id.bottomNav)
+        val socialMediaButton: ImageButton = findViewById(R.id.social_media)
+        val dashboardScreenButton: ImageButton = findViewById(R.id.dashboard)
 
-        // Set up item selection listener for the bottom navigation bar
+        //bottom navigation bar
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.home -> {
@@ -67,51 +69,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val socialMediaButton: ImageButton = findViewById(R.id.social_media)
-        val dashboardScreenButton: ImageButton = findViewById(R.id.dashboard) // Correct the ID here
 
+        //buttons
         socialMediaButton.setOnClickListener { view ->
             when (view.id) {
                 R.id.social_media -> {
                     loadFragment(SocialMediaFragment())
 
-                    // Change visibility of the Bottom Navigation View
-                    // Hide the Bottom Navigation View with animation
-                    bottomNav.animate()
-                        .translationY(bottomNav.height.toFloat())
-                        .alpha(0f)
-                        .setDuration(300) // Duration of the hide animation
-                        .withEndAction {
-                            bottomNav.visibility = View.GONE // Make it gone after the animation
-                        }
 
-
-                    // Create the color animation from the current color to green
-                    val colorFrom = ContextCompat.getColor(this, android.R.color.transparent) // Start from transparent or the original color
-                    val colorTo = ContextCompat.getColor(this, R.color.green) // End with green
-                    val colorAnimator = ObjectAnimator.ofArgb(
-                        socialMediaButton,
-                        "colorFilter",
-                        colorFrom,
-                        colorTo
-                    )
-
-                    // Set animation duration and evaluator for smooth transition
-                    colorAnimator.duration = 500 // 500ms for a smooth transition
-                    colorAnimator.setEvaluator(ArgbEvaluator()) // Ensures the color transition is smooth
-                    colorAnimator.addUpdateListener { animator ->
-                        val colorValue = animator.animatedValue as Int
-                        socialMediaButton.setColorFilter(colorValue, PorterDuff.Mode.SRC_IN)
-                    }
-
-                    // Start the color animation
-                    colorAnimator.start()
-
-                    // Change the dashboard color to green (using a color tint)
-                    dashboardScreenButton.setColorFilter(
-                        ContextCompat.getColor(this, R.color.gray),
-                        android.graphics.PorterDuff.Mode.SRC_IN
-                    )
                 }
             }
         }
@@ -132,10 +97,11 @@ class MainActivity : AppCompatActivity() {
                         .alpha(1f) // Fade in
                         .setDuration(300) // Duration of the show animation
 
-
-                    // Create the color animation from the current color to green
-                    val colorFrom = ContextCompat.getColor(this, android.R.color.transparent) // Start from transparent or the original color
+                    // Transition the color of the dashboard button from gray to green
+                    val colorFrom = ContextCompat.getColor(this, R.color.gray) // Start from gray
                     val colorTo = ContextCompat.getColor(this, R.color.green) // End with green
+
+                    // Create color animation for dashboardScreenButton
                     val colorAnimator = ObjectAnimator.ofArgb(
                         dashboardScreenButton,
                         "colorFilter",
@@ -154,7 +120,7 @@ class MainActivity : AppCompatActivity() {
                     // Start the color animation
                     colorAnimator.start()
 
-                    // Change the dashboard color to green (using a color tint)
+                    // Ensure the social media button's color is set to gray when switching to the dashboard
                     socialMediaButton.setColorFilter(
                         ContextCompat.getColor(this, R.color.gray),
                         android.graphics.PorterDuff.Mode.SRC_IN
@@ -163,30 +129,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//        socialMediaButton.setOnClickListener {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//        }
-
-
     }
+
+
 
     // Function to load fragments into the container
     private fun loadFragment(fragment: Fragment) {
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.container)
-
-        // Fade out current fragment
-        currentFragment?.view?.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_out))
-
-        // Load new fragment with fade in
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
         transaction.replace(R.id.container, fragment)
-        transaction.addToBackStack(null) // Optional: add to back stack
         transaction.commit()
-
-        // After the fragment is added, start fade in animation
-        fragment.view?.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in))
     }
 
 }
