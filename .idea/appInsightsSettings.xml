@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.agrichime" />
+                  <option name="mobileSdkAppId" value="1:904497510498:android:26cc687835fe82f7f6b93b" />
+                  <option name="projectId" value="agrichimedemo" />
+                  <option name="projectNumber" value="904497510498" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
