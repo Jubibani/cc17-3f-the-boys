@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class LogInScreen : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -65,11 +65,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val socialMediaButton = findViewById<Button>(R.id.button2)
+        //val socialMediaButton = findViewById<Button>(R.id.button2)
 
-        socialMediaButton.setOnClickListener {
+        /*socialMediaButton.setOnClickListener {
             val intent = Intent(this, SocialMediaScreen::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }
