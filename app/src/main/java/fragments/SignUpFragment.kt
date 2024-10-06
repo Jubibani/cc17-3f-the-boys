@@ -96,7 +96,7 @@ class SignUpFragment : AppCompatActivity() {
         .build()
 
         // Initialize Google Sign-In client
-        //googleSignInClient = GoogleSignIn.getClient(this, gso)
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         // Set click listeners
         signupBtnSignup.setOnClickListener {
