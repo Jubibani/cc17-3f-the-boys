@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loginMain"
@@ -10,14 +11,14 @@
     <TextView
         android:id="@+id/appNameLogin"
         android:layout_width="wrap_content"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/comfortaa_light"
-        android:rotationX="10"
+        android:rotationX="19"
         android:text="@string/agrichime"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#1B5E20"
-        android:textSize="34sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/loginField"
@@ -99,6 +100,23 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#350202"
+        android:paddingTop="24dp"
+        android:text="&quot;Invalid username or password&quot;"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/loginField"
+        app:layout_constraintEnd_toEndOf="@+id/loginField"
+        app:layout_constraintStart_toStartOf="@+id/loginField"
+        app:layout_constraintTop_toTopOf="@+id/loginField"
+        tools:visibility="gone" />
+
+    <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -127,6 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:clickable="true"
         android:fontFamily="sans-serif-black"
         android:text="@string/sign_up_link"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
