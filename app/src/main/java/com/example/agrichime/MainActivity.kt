@@ -2,7 +2,6 @@ package com.example.agrichime
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -11,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import fragments.SignUpFragment
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +25,11 @@ class LoginActivity : AppCompatActivity() {
 
         //val errorMessage = "Invalid username or password"
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
-        forgotPassword.setOnClickListener {
-            val intent = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(intent)
-        }
+        forgotPassword.setOnClickListener { TODO ("connect to forgot password page") }
 
         val signUpLink = findViewById<TextView>(R.id.signUpLink)
         signUpLink.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, SignUpFragment::class.java)
             startActivity(intent)
         }
 
@@ -53,9 +50,6 @@ class LoginActivity : AppCompatActivity() {
                 //display error message
                 val errorMessage = findViewById<TextView>(R.id.errorMessage)
                 errorMessage.visibility = View.VISIBLE
-                // remove warning text view after 2.5 seconds
-                android.os.Handler(Looper.getMainLooper()).postDelayed(
-                    {errorMessage.visibility = View.GONE}, 2500)
             }
         }
 
@@ -74,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //commented this out to test the login screen, please uncomment if needed. -chrispaolosab-it
+
         //val socialMediaButton = findViewById<Button>(R.id.button2)
 
         /*socialMediaButton.setOnClickListener {
