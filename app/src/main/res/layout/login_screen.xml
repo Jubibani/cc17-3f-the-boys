@@ -100,6 +100,23 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#350202"
+        android:paddingTop="24dp"
+        android:text="&quot;Invalid username or password&quot;"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/loginField"
+        app:layout_constraintEnd_toEndOf="@+id/loginField"
+        app:layout_constraintStart_toStartOf="@+id/loginField"
+        app:layout_constraintTop_toTopOf="@+id/loginField"
+        tools:visibility="gone" />
+
+    <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
