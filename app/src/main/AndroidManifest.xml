@@ -13,15 +13,19 @@
         android:theme="@style/Theme.AgriChime"
         tools:targetApi="31">
         <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
             android:name=".ShoppingScreen"
             android:exported="false" />
-
-        <activity android:name=".SignUpScreen"
-            android:exported="false" />
-
         <activity
-            android:name=".ForgotPasswordScreen" />
-
+            android:name=".SignUpScreen"
+            android:exported="false" />
+        <activity android:name=".ForgotPasswordScreen" />
         <activity
             android:name=".HomeScreen"
             android:exported="false" />
@@ -40,6 +44,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
