@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import fragments.SignUpFragment
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,10 @@ class LoginActivity : AppCompatActivity() {
         forgotPassword.setOnClickListener { TODO ("connect to forgot password page") }
 
         val signUpLink = findViewById<TextView>(R.id.signUpLink)
-        signUpLink.setOnClickListener { TODO("connect to sign up page") }
+        signUpLink.setOnClickListener {
+            val intent = Intent(this, SignUpFragment::class.java)
+            startActivity(intent)
+        }
 
         //login button, username, and password
         val loginButton = findViewById<Button>(R.id.loginButton)

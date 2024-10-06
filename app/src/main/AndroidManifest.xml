@@ -15,21 +15,15 @@
         <activity
             android:name=".ShoppingScreen"
             android:exported="false" />
-
-        <activity android:name=".SignUpScreen"
-            android:exported="false" />
-
+        <activity
+            android:name="fragments.SignUpFragment"/>
         <activity
             android:name=".ForgotPasswordScreen" />
-
         <activity
-            android:name=".HomeScreen"
+            android:name="fragments.HomeFragment"
             android:exported="false" />
         <activity
-            android:name=".LoginScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".screens.SocialMediaScreen"
+            android:name="fragments.SocialMediaFragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
