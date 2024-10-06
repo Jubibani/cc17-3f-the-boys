@@ -12,7 +12,7 @@ import com.example.agrichime.MainActivity
 import com.example.agrichime.R
 import fragments.SignUpFragment
 
-class LogInActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
