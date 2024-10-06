@@ -25,7 +25,10 @@ class LoginActivity : AppCompatActivity() {
 
         //val errorMessage = "Invalid username or password"
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
-        forgotPassword.setOnClickListener { TODO ("connect to forgot password page") }
+        forgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         val signUpLink = findViewById<TextView>(R.id.signUpLink)
         signUpLink.setOnClickListener {

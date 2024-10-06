@@ -18,7 +18,9 @@
         <activity
             android:name="fragments.SignUpFragment"/>
         <activity
-            android:name=".ForgotPasswordScreen" />
+            android:name=".ForgotPasswordActivity"
+            android:enabled="true"
+            android:exported="false"/>
         <activity
             android:name="fragments.HomeFragment"
             android:exported="false" />
