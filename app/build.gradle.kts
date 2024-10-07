@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.example.agrichime"
-    compileSdk = 34
+    compileSdk = 30
 
     defaultConfig {
         applicationId = "com.example.agrichime"
-        minSdk = 34
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

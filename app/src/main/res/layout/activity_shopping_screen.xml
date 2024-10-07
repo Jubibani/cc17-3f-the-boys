@@ -6,28 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <FrameLayout
-        android:id="@+id/top"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+    <com.google.android.material.navigation.NavigationView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/scrollView1">
-        <TextView
+        app:layout_constraintBottom_toTopOf="@id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="market"
-            android:gravity="center"/>
-    </FrameLayout>
+            android:layout_height="50dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Find Products"
+                android:gravity="center"/>
+        </FrameLayout>
+    </com.google.android.material.navigation.NavigationView>
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="627dp"
+        android:layout_width="384dp"
+        android:layout_height="579dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -44,6 +49,17 @@
             app:layout_constraintTop_toBottomOf="@+id/top">
 
 
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Search Store">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Serach Store"/>
+            </androidx.appcompat.widget.SearchView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -53,14 +69,15 @@
                     android:id="@+id/frameTop1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="1dp">
 
                     <ImageView
-                        android:id="@+id/imageView1"
+                        android:id="@+id/imageEggPlan"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/images" />
 
                     <TextView
                         android:id="@+id/textView1"
@@ -68,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Eggplant/Talong" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -81,7 +98,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/sitaw" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -89,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Sayote/Chayote" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -106,9 +123,9 @@
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_height="118dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/brocolli" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -116,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Brocolli" />
 
                 </FrameLayout>
 
@@ -130,7 +147,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/pumpkin" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -138,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Pumpkin" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -157,7 +174,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/sitaw" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -165,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="String Beans/Sitaw" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -178,7 +195,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/onions"/>
 
                     <TextView
                         android:id="@+id/textView6"
@@ -186,7 +203,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Onions" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -205,7 +222,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/bellpepper" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -213,7 +230,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Bell Pepper" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -226,7 +243,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/ampalaya" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -234,7 +251,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView" />
+                        android:text="Ampalaya" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -337,8 +354,11 @@
     </ScrollView>
 
 
-    <FrameLayout
+
+
+    <LinearLayout
         android:id="@+id/bottom"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         tools:layout_editor_absoluteX="1dp"
@@ -352,7 +372,7 @@
             android:layout_height="match_parent"
             android:text="Navigation"
             android:gravity="center"/>
-    </FrameLayout>
+    </LinearLayout>
 
 
 
