@@ -2,6 +2,8 @@ package com.example.agrichime
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -48,16 +50,20 @@ class LoginActivity : AppCompatActivity() {
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-            }
-            else {
+            } else {
                 //display error message
                 val errorMessage = findViewById<TextView>(R.id.errorMessage)
                 errorMessage.visibility = View.VISIBLE
+                // make TextView disappear after 2.5 secs.
+                Handler(Looper.getMainLooper()).postDelayed({
+                    errorMessage.visibility = View.GONE
+                }, 2500)
             }
         }
 
+    }
 }
-}
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
