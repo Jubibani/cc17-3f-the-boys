@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="TextView2" />
+                        android:text="TextView" />
                 </FrameLayout>
 
                 <FrameLayout
