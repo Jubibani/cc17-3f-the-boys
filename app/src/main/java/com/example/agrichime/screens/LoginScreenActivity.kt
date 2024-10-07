@@ -10,8 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.agrichime.MainActivity
 import com.example.agrichime.R
+import fragments.SignUpFragment
 
-class LogInActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,8 +24,12 @@ class LogInActivity : AppCompatActivity() {
         }
         val forgotPassword = findViewById<TextView>(R.id.forgotPassword)
         forgotPassword.setOnClickListener {TODO ("connect to forgot password page") }
+
         val signUpLink = findViewById<TextView>(R.id.signUpLink)
-        signUpLink.setOnClickListener { TODO("connect to sign up page") }
+        signUpLink.setOnClickListener {
+            val intent = Intent(this, SignUpFragment::class.java)
+            startActivity(intent)
+        }
         val loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
