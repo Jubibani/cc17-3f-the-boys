@@ -77,7 +77,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/images" />
+                        android:src="@drawable/eggplant" />
 
                     <TextView
                         android:id="@+id/textView1"
@@ -98,7 +98,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/sitaw" />
+                        android:src="@drawable/sayote" />
 
                     <TextView
                         android:id="@+id/textView2"
