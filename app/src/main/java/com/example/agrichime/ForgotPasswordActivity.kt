@@ -36,7 +36,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
                     resetSuccessPrompt.visibility = View.GONE
                 }, 2500)
 
-                // go back to login screen if successfull
+                // go back to login screen if succesfull
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

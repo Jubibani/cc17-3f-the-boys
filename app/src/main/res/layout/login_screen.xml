@@ -101,20 +101,20 @@
 
     <TextView
         android:id="@+id/errorMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#350202"
-        android:paddingTop="24dp"
-        android:text="&quot;Invalid username or password&quot;"
+        android:layout_width="245dp"
+        android:layout_height="155dp"
+        android:background="#D9BF4444"
+        android:padding="31dp"
+        android:text="@string/signUpErrorMessage"
         android:textAlignment="center"
-        android:textColor="#FF0000"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/loginField"
         app:layout_constraintEnd_toEndOf="@+id/loginField"
         app:layout_constraintStart_toStartOf="@+id/loginField"
         app:layout_constraintTop_toTopOf="@+id/loginField"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/forgotPassword"
