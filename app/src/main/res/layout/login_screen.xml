@@ -100,21 +100,21 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginField"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <TextView
         android:id="@+id/errorMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#D9F05555"
+        android:background="#F1F05555"
         android:padding="31dp"
         android:text="@string/signUpErrorMessage"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/loginField"
         app:layout_constraintEnd_toEndOf="@+id/loginField"
@@ -136,19 +136,19 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginField"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.162" />
 
     <TextView
         android:id="@+id/accountSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="72dp"
         android:text="@string/dont_have_an_account"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
@@ -159,13 +159,14 @@
         android:background="#FFFFFF"
         android:clickable="true"
         android:fontFamily="sans-serif-black"
+        android:minHeight="48dp"
+        android:paddingTop="10dp"
         android:text="@string/sign_up_link"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#127601"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/accountSignUp"
         app:layout_constraintVertical_bias="0.0" />
