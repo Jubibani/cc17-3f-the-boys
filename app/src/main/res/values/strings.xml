@@ -113,4 +113,8 @@
     <string name="reset_pw_success_string">Successfully entered email address!\nPlease check your email!</string>
     <string name="enter_valid_email_string">Please enter a VALID email address!</string>
     <string name="veggielogo">veggielogo</string>
+    <string name="profile_address">Baguio City</string>
+    <string name="profile_name_user">Agri User</string>
+    <string name="view_contacts">View Contacts</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>
