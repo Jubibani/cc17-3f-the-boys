@@ -57,35 +57,62 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Serach Store"/>
+                    android:text="Search Store"/>
             </androidx.appcompat.widget.SearchView>
 
             <LinearLayout
+                android:id="@+id/firstRowLayOut"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
                     android:id="@+id/frameTop1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="1dp">
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/imageEggPlan"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/eggplant" />
+
 
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="Eggplant/Talong" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+                    <Button
+                        android:id="@+id/eggPlantPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/eggPlantMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -94,25 +121,51 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/imageSayote"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/sayote" />
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/sitaw" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/sayoteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="Sayote/Chayote" />
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="Sayote/Chayote" />
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+                    <Button
+                        android:id="@+id/sayotePlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/sayoteMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/secondRow"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -121,19 +174,45 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/brocolliImage"
                         android:layout_width="100dp"
-                        android:layout_height="118dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/brocolli" />
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/brocolliText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="Brocolli" />
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="60dp"
-                        android:text="Brocolli" />
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+
+                    <Button
+                        android:id="@+id/brocolliPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/brocolliMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
 
                 </FrameLayout>
 
@@ -143,10 +222,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/pumpkinImage"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/pumpkin" />
 
                     <TextView
@@ -154,14 +234,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="Pumpkin" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+                    <Button
+                        android:id="@+id/pumpkinPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/pumpkinMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -170,10 +274,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/stringBeansImage"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/sitaw" />
 
                     <TextView
@@ -181,8 +286,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="String Beans/Sitaw" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+                    <Button
+                        android:id="@+id/stringBeansPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/stringBeansMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -195,6 +324,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/onions"/>
 
                     <TextView
@@ -202,14 +332,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="Onions" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+                    <Button
+                        android:id="@+id/onionsPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/onionsMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
+
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -222,6 +377,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         tools:srcCompat="@drawable/bellpepper" />
 
                     <TextView
@@ -229,8 +385,34 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="Bell Pepper" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+
+                    <Button
+                        android:id="@+id/bellPepperPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+"
+                        />
+                    <Button
+                        android:id="@+id/bellPepperMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -243,6 +425,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
                         tools:srcCompat="@drawable/ampalaya" />
 
                     <TextView
@@ -250,8 +433,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="40dp"
                         android:text="Ampalaya" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:textSize="10dp"
+                        android:text="1 Kilogram"/>
+                    <Button
+                        android:id="@+id/ampalayaPlus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+" />
+                    <Button
+                        android:id="@+id/ampalayaMinus"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="-" />
+
                 </FrameLayout>
             </LinearLayout>
 
