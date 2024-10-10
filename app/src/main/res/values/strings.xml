@@ -117,4 +117,7 @@
     <string name="profile_name_user">Agri User</string>
     <string name="view_contacts">View Contacts</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="view_shop">Sell Now</string>
+    <string name="profile_name_vendor">Agri Vendor</string>
 </resources>
