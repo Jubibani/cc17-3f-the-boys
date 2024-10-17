@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application name -->
+    <string name="app_name" translatable="false">PaymentScreen</string>
+
+    <!-- Payment Method Labels -->
+    <string name="name_on_card" translatable="false">Name on Card:</string>
+    <string name="card_number" translatable="false">Card Number:</string>
+    <string name="expiry_date" translatable="false">Expiry Date:</string>
+    <string name="postal_code" translatable="false">Zip/Postal Code:</string>
+
+    <!-- Error messages -->
+    <string name="error_empty_fields" translatable="false">Please fill in all fields</string>
+    <string name="payment_failed" translatable="false">Payment failed. Please try again.</string>
+
+    <!-- Button text -->
+    <string name="proceed" translatable="false">Proceed</string>
+
+    <!-- Toast messages -->
+    <string name="fill_all_fields" translatable="false">Please fill in all fields</string>
+    <string name="payment_processed" translatable="false">Payment processed for %1$s</string>
+
+    <!-- Additional Payment Screen Text -->
+    <string name="welcome_paypal">Welcome to PayPal Payment</string>
+    <string name="welcome_gcash">Welcome to Gcash Payment</string>
+    <string name="welcome_visa">Welcome to Visa Payment</string>
+
+    <!-- Logo Descriptions -->
+    <string name="gcash_logo">Gcash Logo</string>
+    <string name="paypal_logo">Paypal Logo</string>
+    <string name="visa_logo">Visa Logo</string>
+
+</resources>
