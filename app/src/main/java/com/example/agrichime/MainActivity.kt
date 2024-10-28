@@ -305,6 +305,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //to user profile
+        val toUserProfile: ImageButton = findViewById(R.id.toUserProfile)
+        toUserProfile.setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Function to load fragments into the container
