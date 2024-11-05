@@ -100,6 +100,8 @@ class MainActivity : AppCompatActivity() {
         val socialMediaButton: ImageButton = findViewById(R.id.social_media)
         val dashboardScreenButton: ImageButton = findViewById(R.id.dashboard)
 
+
+
         // on ready
         loadFragment(HomeFragment())
 
