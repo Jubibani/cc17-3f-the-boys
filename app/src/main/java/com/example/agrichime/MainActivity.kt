@@ -1,11 +1,7 @@
 package com.example.agrichime
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.ui.Modifier
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
@@ -18,22 +14,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -73,30 +53,26 @@ class LoginActivity : AppCompatActivity() {
         //login button, username, and password
         val loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.setOnClickListener {
+            val enteredUsername = findViewById<EditText>(R.id.loginEmail).text.toString()
+            val enteredPassword = findViewById<EditText>(R.id.loginPassword).text.toString()
+            val usernameTemporary = "agrichimetheboys"
+            val passwordTemporary = "sagulaymaybuhay"
+            val usernameVendor = "vendorako"
+            val passwordVendor = "vendorako123"
 
-            // commented for development
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            if (enteredUsername == usernameTemporary && enteredPassword == passwordTemporary) {
 
-
-//            val enteredUsername = findViewById<EditText>(R.id.loginEmail).text.toString()
-//            val enteredPassword = findViewById<EditText>(R.id.loginPassword).text.toString()
-//            val usernameTemporary = "agrichimetheboys"
-//            val passwordTemporary = "sagulaymaybuhay"
-//
-//            if (enteredUsername == usernameTemporary && enteredPassword == passwordTemporary) {
-//
-//                val intent = Intent(this, MainActivity::class.java)
-//                startActivity(intent)
-//            } else {
-//                //display error message
-//                val errorMessage = findViewById<TextView>(R.id.errorMessage)
-//                errorMessage.visibility = View.VISIBLE
-//                // make TextView disappear after 2.5 secs.
-//                Handler(Looper.getMainLooper()).postDelayed({
-//                    errorMessage.visibility = View.GONE
-//                }, 2500)
-//            }
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                //display error message
+                val errorMessage = findViewById<TextView>(R.id.errorMessage)
+                errorMessage.visibility = View.VISIBLE
+                // make TextView disappear after 2.5 secs.
+                Handler(Looper.getMainLooper()).postDelayed({
+                    errorMessage.visibility = View.GONE
+                }, 2500)
+            }
         }
 
     }
@@ -329,10 +305,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+        //to user profile
+        val toUserProfile: ImageButton = findViewById(R.id.toUserProfile)
+        toUserProfile.setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-
 
     // Function to load fragments into the container
     private fun loadFragment(fragment: Fragment) {
@@ -340,7 +319,5 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
-
-
 
 }

@@ -5,7 +5,7 @@
     <string name="loginpagebg">loginPageBG</string>
     <string name="enter_password">Enter password</string>
     <string name="log_in">Log In</string>
-    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password">Forgot Password? >></string>
     <string name="dont_have_an_account">Dont have an account?</string>
     <string name="sign_up_link">sign up</string>
     <string name="social_media">Social Media</string>
@@ -105,4 +105,19 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="signUpErrorMessage">Invalid username or password</string>
+    <string name="email_address_string">email address</string>
+    <string name="forgot_password_string">Forgot Password?</string>
+    <string name="reset_pw_instruct">Enter your email address and we will send you the instructions on how to reset your password.</string>
+    <string name="reset_my_password_string">Reset my Password</string>
+    <string name="reset_pw_success_string">Successfully entered email address!\nPlease check your email!</string>
+    <string name="enter_valid_email_string">Please enter a VALID email address!</string>
+    <string name="veggielogo">veggielogo</string>
+    <string name="profile_address">Baguio City</string>
+    <string name="profile_name_user">Agri User</string>
+    <string name="view_contacts">View Contacts</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="view_shop">Sell Now</string>
+    <string name="profile_name_vendor">Agri Vendor</string>
 </resources>

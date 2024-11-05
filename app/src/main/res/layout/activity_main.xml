@@ -40,7 +40,7 @@
             tools:visibility="invisible" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/toUserProfile"
             android:layout_width="0dp"
             android:layout_height="75dp"
             android:layout_marginRight="16dp"
