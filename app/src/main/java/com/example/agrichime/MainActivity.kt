@@ -57,13 +57,12 @@ class LoginActivity : AppCompatActivity() {
             val enteredPassword = findViewById<EditText>(R.id.loginPassword).text.toString()
             val usernameTemporary = "agrichimetheboys"
             val passwordTemporary = "sagulaymaybuhay"
-            val usernameVendor = "vendorako"
-            val passwordVendor = "vendorako123"
 
             if (enteredUsername == usernameTemporary && enteredPassword == passwordTemporary) {
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             } else {
                 //display error message
                 val errorMessage = findViewById<TextView>(R.id.errorMessage)
