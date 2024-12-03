@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.agrichime
 
 import android.animation.ArgbEvaluator
@@ -13,6 +15,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -320,5 +323,4 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
-
 }
