@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.agrichime
 
 import android.animation.ArgbEvaluator
@@ -13,6 +15,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -57,13 +60,12 @@ class LoginActivity : AppCompatActivity() {
             val enteredPassword = findViewById<EditText>(R.id.loginPassword).text.toString()
             val usernameTemporary = "agrichimetheboys"
             val passwordTemporary = "sagulaymaybuhay"
-            val usernameVendor = "vendorako"
-            val passwordVendor = "vendorako123"
 
             if (enteredUsername == usernameTemporary && enteredPassword == passwordTemporary) {
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             } else {
                 //display error message
                 val errorMessage = findViewById<TextView>(R.id.errorMessage)
@@ -99,6 +101,8 @@ class MainActivity : AppCompatActivity() {
         bottomNav = findViewById(R.id.bottomNav)
         val socialMediaButton: ImageButton = findViewById(R.id.social_media)
         val dashboardScreenButton: ImageButton = findViewById(R.id.dashboard)
+
+
 
         // on ready
         loadFragment(HomeFragment())
@@ -319,5 +323,4 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
-
 }

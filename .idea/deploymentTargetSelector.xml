@@ -13,6 +13,15 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
+<<<<<<< HEAD
+=======
+      <SelectionState runConfigName="UserProfileActivity">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="EditProfileActivity">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+>>>>>>> a5f8eb1ec849ded503fd0a0755a150c4f8b4f71f
     </selectionStates>
   </component>
 </project>

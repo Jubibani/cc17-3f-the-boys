@@ -126,8 +126,7 @@
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#eeeeee"
-        android:backgroundTint="#625B5B5B"
+        android:backgroundTint="#ffffff"
         android:padding="1dp"
         android:paddingStart="13dp"
         android:paddingEnd="13dp"
@@ -136,16 +135,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.864"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginField"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.435" />
 
     <TextView
         android:id="@+id/accountSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:text="@string/dont_have_an_account"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
